@@ -1,3 +1,4 @@
+// circle
 const Search = () => (
     <div style={{
       width: '40px',
