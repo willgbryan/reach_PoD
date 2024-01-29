@@ -1,12 +1,7 @@
-// circle
-const Search = () => (
-    <div style={{
-      width: '40px',
-      height: '40px',
-      backgroundColor: 'white',
-      borderRadius: '50%',
-    }}></div>
-  );
-  
-  export default Search;
-  
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
+const Search = () => <FontAwesomeIcon icon={faSearch} size="2x" color="white"/>;
+
+export default Search;

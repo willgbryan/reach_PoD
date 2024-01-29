@@ -24,12 +24,25 @@ code {
   color: black;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 2);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0);
+  border: 2px solid #c7fe00;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   z-index: 5;
+}
+
+.connect-button {
+  background-color: black; /* Fill color changed to black */
+  color: #c7fe00; /* Text color changed to green */
+  border: 2px solid #c7fe00; /* Green border */
+  padding: 10px 23px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 190px; /* Adjust this value to the actual bottom of the .icon-container */
+  z-index: 4; /* Ensures it's under the icon-container if they overlap */
 }
 
 .drag-area {

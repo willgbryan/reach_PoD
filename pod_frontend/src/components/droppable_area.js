@@ -5,17 +5,18 @@ import DroppedAnalytics from './dropped_analytics';
 import DroppedCsv from './dropped_csv';
 import DroppedSearch from './dropped_search';
 
-const renderShape = (type) => {
+const renderShape = (type, props) => {
     switch (type) {
-      case 'pdf': return <DroppedPdf />;
-      case 'analytics': return <DroppedAnalytics />;
-      case 'csv': return <DroppedCsv />;
-      case 'search': return <DroppedSearch />;
+      case 'pdf': return DroppedPdf;
+      case 'analytics': return DroppedAnalytics;
+      case 'csv': return DroppedCsv;
+      case 'search': return DroppedSearch;
       default: return null;
     }
 };
 
-const DroppableArea = ({ onDrop, items }) => {
+
+const DroppableArea = ({ onDrop, items, onSelect, isConnecting }) => {
     const [, dropRef] = useDrop(() => ({
         accept: 'icon',
         drop: (item, monitor) => {
@@ -26,7 +27,12 @@ const DroppableArea = ({ onDrop, items }) => {
 
     return (
         <div ref={dropRef} className="drag-area full-page">
-            {items.map((item, index) => {
+            {items.map((item) => {
+                console.log("Rendering item:", item);
+
+                const Component = renderShape(item.type);
+                if (!Component) return null;
+
                 const style = {
                     left: item.position.x + 'px',
                     top: item.position.y + 'px',
@@ -34,8 +40,8 @@ const DroppableArea = ({ onDrop, items }) => {
                 };
 
                 return (
-                    <div key={index} style={style}>
-                        {renderShape(item.type)}
+                    <div key={item.id} style={style}> {/* Use item.id as key */}
+                    <Component id={item.id} onSelect={onSelect} isConnecting={isConnecting} />
                     </div>
                 );
             })}

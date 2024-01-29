@@ -1,11 +1,10 @@
-// square
-const Pdf = () => (
-    <div style={{
-      width: '40px',
-      height: '40px',
-      backgroundColor: 'white',
-    }}></div>
-  );
-  
-  export default Pdf;
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+
+const Pdf = () => <FontAwesomeIcon icon={faFilePdf} size="2x" color="white"/>;
+
+export default Pdf;
+
+
   

@@ -1,13 +1,7 @@
-// triangle
-const Analytics = () => (
-    <div style={{
-      width: '0',
-      height: '0',
-      borderLeft: '20px solid transparent',
-      borderRight: '20px solid transparent',
-      borderBottom: '40px solid white',
-    }}></div>
-  );
-  
-  export default Analytics;
-  
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartBar } from '@fortawesome/free-solid-svg-icons';
+
+const Analytics = () => <FontAwesomeIcon icon={faChartBar} size="2x" color="white"/>;
+
+export default Analytics;
