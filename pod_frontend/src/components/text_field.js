@@ -1,24 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
-const TextField = ({ id, onSelect, isConnecting, onTextChange }) => {
-  const [text, setText] = useState('');
-
-  const handleChange = (event) => {
-    setText(event.target.value);
-    if (onTextChange) {
-      onTextChange(id, event.target.value);
-    }
-  };
-
-  return (
-    <input 
-      type="text" 
-      value={text} 
-      onChange={handleChange} 
-      style={{ cursor: isConnecting ? 'pointer' : 'default' }}
-      onClick={(e) => isConnecting && onSelect(id)}
-    />
-  );
-};
+const TextField = () => <FontAwesomeIcon icon={faEdit} size="2x" color="white"/>;
 
 export default TextField;
