@@ -17,12 +17,12 @@ const DroppedTextField = ({ id, onSelect, isConnecting }) => {
   };
 
   return (
-    <div onClick={handleClick} style={{ cursor: isConnecting ? 'pointer' : 'default' }}>
+    <div onClick={handleClick} style={{ cursor: isConnecting ? 'pointer' : 'default', backgroundColor: 'black', padding: '5px' }}>
       <input 
         type="text"
         value={text}
         onChange={handleChange}
-        style={{ marginLeft: '5px' }}
+        style={{ color: 'white', backgroundColor: 'black', border: '2px solid #c7fe00', marginLeft: '5px' }}
       />
     </div>
   );
