@@ -4,6 +4,7 @@ import DroppedPdf from './dropped_pdfs';
 import DroppedAnalytics from './dropped_analytics';
 import DroppedCsv from './dropped_csv';
 import DroppedSearch from './dropped_search';
+import TextField from './text_field';
 
 const renderShape = (type, props) => {
     switch (type) {
@@ -11,6 +12,7 @@ const renderShape = (type, props) => {
       case 'analytics': return DroppedAnalytics;
       case 'csv': return DroppedCsv;
       case 'search': return DroppedSearch;
+      case 'text_field': return TextField;
       default: return null;
     }
 };

@@ -4,12 +4,15 @@ import Pdf from './pdfs';
 import Analytics from './analytics';
 import Csv from './flat_files';
 import Search from './search';
+import TextField from './text_field';
+
 
 const shapeComponents = {
     pdf: Pdf,
     analytics: Analytics,
     csv: Csv,
     search: Search,
+    text_field: TextField,
 };
 
 const DraggableIcon = ({ type }) => {
