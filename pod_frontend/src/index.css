@@ -41,7 +41,7 @@ code {
   border-radius: 10px;
   cursor: pointer;
   position: absolute;
-  top: 190px; /* Adjust this value to the actual bottom of the .icon-container */
+  top: 230px; /* Adjust this value to the actual bottom of the .icon-container */
   z-index: 4; /* Ensures it's under the icon-container if they overlap */
 }
 
