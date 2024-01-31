@@ -70,6 +70,7 @@ function App() {
         <DraggableIcon type="csv" />
         <DraggableIcon type="analytics" />
         <DraggableIcon type="search" />
+        <DraggableIcon type="text_field" />
         <button onClick={toggleConnectionMode} className="connect-button">&gt;</button>
       </div>
       <div className="drag-area">
