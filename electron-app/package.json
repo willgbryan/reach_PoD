@@ -1,0 +1,23 @@
+{
+  "name": "electron-app",
+  "version": "0.0.1",
+  "description": "electron app to support desktop functionality for the reach platform",
+  "main": "main.js",
+  "scripts": {
+    "start":"electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willgbryan/reach_PoD.git"
+  },
+  "author": "Will Bryan",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/willgbryan/reach_PoD/issues"
+  },
+  "homepage": "https://github.com/willgbryan/reach_PoD#readme",
+  "devDependencies": {
+    "electron": "^28.2.2"
+  }
+}
