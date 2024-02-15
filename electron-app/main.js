@@ -10,7 +10,9 @@ const createWindow = () => {
       }
   })
 
-  win.loadFile('index.html')
+  win.loadFile(path.join('build/index.html'));
+  win.webContents.openDevTools();
+
 }
 
 app.whenReady().then(() => {
