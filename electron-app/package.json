@@ -4,7 +4,8 @@
   "description": "electron app to support desktop functionality for the reach platform",
   "main": "main.js",
   "scripts": {
-    "start":"electron .",
+    "start": "electron .",
+    "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,8 +17,29 @@
   "bugs": {
     "url": "https://github.com/willgbryan/reach_PoD/issues"
   },
-  "homepage": "https://github.com/willgbryan/reach_PoD#readme",
+  "homepage": ".",
   "devDependencies": {
     "electron": "^28.2.2"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^3.5.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
